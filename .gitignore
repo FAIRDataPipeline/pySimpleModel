@@ -147,3 +147,5 @@ doc/_build/
 
 # Poetry Lock
 poetry.lock
+
+.vscode/

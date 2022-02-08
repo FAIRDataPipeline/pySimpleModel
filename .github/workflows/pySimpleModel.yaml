@@ -42,5 +42,5 @@ jobs:
           pip install .
           fair init --ci
           fair registry start
-          fair pull data_pipeline_api/ext/SEIRSconfig.yaml
-          fair run data_pipeline_api/ext/SEIRSconfig.yaml
+          fair pull simpleModel/ext/SEIRSconfig.yaml
+          fair run simpleModel/ext/SEIRSconfig.yaml
