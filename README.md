@@ -5,9 +5,7 @@ Full documention of the pyDataPipeline is avaialable at [https://www.fairdatapip
 ## Installation
 pySimpleModel can be installed using pip:
 ```
-git clone https://github.com/FAIRDataPipeline/pythonFDP.git
-
-git checkout dev
+git clone https://https://github.com/FAIRDataPipeline/pySimpleModel.git
 
 pip3 install -e .
 ```
