@@ -9,3 +9,4 @@ A simple example of an SEIRS epidemiological model using the [FAIR Data Pipeline
 3. Clone this repository: `git clone https://github.com/FAIRDataPipeline/pySimpleModel.git`.
 4. Change directory `cd pySimpleModel`.
 5. Install this package `pip install -e .`.
+6. Initialise the registry `fair init --ci`
