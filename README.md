@@ -20,4 +20,7 @@ fair pull simpleModel/ext/SEIRSconfig.yaml
 fair run simpleModel/ext/SEIRSconfig.yaml
 ```
 
-That's it! If you go to the local registry in your browser now (by default at http://localhost:8000), you should see the input and output data recorded in the registry.
+## Check the output
+
+1. Ensure the [local registry is started](https://www.fairdatapipeline.org/docs/data_registry/).
+2. Visit the local registry in your browser (by default at http://localhost:8000), you should see the input and output data recorded in the registry.
