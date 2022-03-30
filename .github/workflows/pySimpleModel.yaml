@@ -6,8 +6,8 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-20.04, macos-latest] #, windows-latest]
-        python: ["3.7","3.8", "3.9"]
+        os: [ubuntu-20.04, macos-latest, windows-latest]
+        python: ["3.8","3.9"]
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
     steps:
@@ -16,28 +16,15 @@ jobs:
         with:
           python-version: ${{ matrix.python }}
           architecture: "x64"
-      - name: Install graphviz
-        run:  |
-              if [ ${{ runner.os }} == "Linux" ]; then
-                  sudo apt-get install graphviz
-              else
-                  brew install graphviz
-              fi
-      - name: Install local registry
-        run: curl -fsSL https://data.scrc.uk/static/localregistry.sh | /bin/bash -s -- -b main
+      - name: Setup Graphviz
+        uses: ts-graphviz/setup-graphviz@v1
       - name: Install Required
         run: brew install memcached
         if: matrix.os == 'macos-latest'
-      - name: Install Poetry
-        uses: snok/install-poetry@v1
-        with:
-          virtualenvs-create: true
-          virtualenvs-in-project: true
       - name: Install and Run Model
         run: |
-          poetry install
-          source .venv/bin/activate
           pip install fair-cli
+          fair registry install
           pip install data-pipeline-api
           pip install .
           fair init --ci
