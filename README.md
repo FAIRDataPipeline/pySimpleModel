@@ -1,5 +1,7 @@
 # pySimpleModel
 
+![build](https://github.com/FAIRDataPipeline/pySimpleModel/actions/workflows/pySimpleModel.yaml/badge.svg)
+
 A simple example of an SEIRS epidemiological model using the [FAIR Data Pipeline](https://fairdatapipeline.github.io).
 
 ## Installation
