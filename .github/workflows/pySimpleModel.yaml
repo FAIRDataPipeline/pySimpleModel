@@ -27,7 +27,7 @@ jobs:
           fair registry install
           pip install data-pipeline-api
           pip install .
-          fair init --ci
+          fair init --ci --local
           fair registry start
-          fair pull simpleModel/ext/SEIRSconfig.yaml
-          fair run simpleModel/ext/SEIRSconfig.yaml
+          fair pull --local simpleModel/ext/SEIRSconfig.yaml
+          fair run --local simpleModel/ext/SEIRSconfig.yaml
