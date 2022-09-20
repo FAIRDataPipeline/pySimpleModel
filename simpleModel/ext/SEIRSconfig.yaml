@@ -19,7 +19,7 @@ register:
   file_type: csv
   release_date: 2021-09-20T12:00
   version: "1.0.0"
-  primary: False
+  primary: false
 
 write:
 - data_product: SEIRS_model/results/model_output/python
