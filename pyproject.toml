@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pySimpleModel"
-version = "0.7.6"
+version = "0.7.7"
 description = "Simple Model example for the Fair Data Pipeline in Python"
 authors = [
     "Ryan J Field <ryan.field@glasgow.ac.uk>",
@@ -29,13 +29,13 @@ keywords = [
 
 [tool.poetry.dependencies]
 python = ">=3.8,<4.0"
-data-pipeline-api = "~0.7.7"
+data-pipeline-api = "*"
 
 [tool.poetry.dev-dependencies]
-poetry = "^1.1.6"
+poetry = "^1.1.12"
 
 [build-system]
-requires = ["poetry-core>=1.0.0"]
+requires = ["poetry>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.urls]
