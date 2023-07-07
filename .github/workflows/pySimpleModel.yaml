@@ -16,10 +16,6 @@ jobs:
         with:
           python-version: ${{ matrix.python }}
           architecture: "x64"
-      - name: Setup Graphviz
-        uses: ts-graphviz/setup-graphviz@v1
-      - name: Install Required
-        run: brew install memcached
         if: matrix.os == 'macos-latest'
       - name: Install and Run Model
         run: |
