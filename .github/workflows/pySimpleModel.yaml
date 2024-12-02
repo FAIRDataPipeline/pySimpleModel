@@ -15,7 +15,6 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python }}
-          architecture: "x64"
         if: matrix.os == 'macos-latest'
       - name: Install and Run Model
         run: |
